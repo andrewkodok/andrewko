@@ -19,9 +19,14 @@ stacks = []
 n1 = ""
 n2 = ""
 
+
 while[True]:
-    x=input("Please input number here ")
-    if (x=="+"):
+    x=input("Input number or operation here ")
+    if (x.isdigit()==True):
+        y=int(x)
+        stacks.append(y)
+        print(stacks)
+    elif (x=="+"):
         add(stacks,n1,n2)
     elif (x=="-"):
         sub(stacks,n1,n2)
@@ -30,6 +35,4 @@ while[True]:
     elif (x=="/"):
         div(stacks,n1,n2)
     else:
-        y=int(x)
-        stacks.append(y)
-        print(stacks)
+        print ("Error. Please input a number or operation")
